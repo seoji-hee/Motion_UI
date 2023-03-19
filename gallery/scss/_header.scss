@@ -1,0 +1,59 @@
+header {
+    width: 400px;
+    height: 100%;
+    position: fixed; //왼쪽 상단 고정
+    top: 0px;
+    left: 0px;
+    background: linear-gradient(45deg, aqua, royalblue);
+    
+    h1{
+      font: bold 50px/1 "orbitron"; //font체 크기/라인하이트 
+      color: #fff;
+      letter-spacing:1px;
+      position: absolute;
+      left:20%;
+      top: 50%;
+      transform: translateY(-200%); //정중앙에서 자기 글자의 세배 만큼 위로 올라감
+
+      &::before{ //설명글
+        content: 'UI/UX DEVELOPMENT';
+        font: 14px/1 "orbitron";
+        color: #fff;
+        letter-spacing: 2px;
+        position: absolute;
+        left: 0px;
+        top: 140px;
+      }
+      &::after{
+        content: '';
+        display: block;
+        width: 130px;
+        height: 2px;
+        background-color: #fff;
+        margin-top: 20px;
+      }
+    }
+
+    ul{
+        position: absolute;
+        left: 60px;
+        bottom: 100px;
+
+        li{
+            float: left;
+            margin-left: 10px; //아이콘 끼리 간격
+
+            a{
+                font-size: 20px; //웹폰트 아이콘의 사이즈
+                color: #fff;
+
+                span{
+                    display: inline-block; //transform 은 inline 요소에 적용되지 않는다
+                    transform: scale(0.7); 
+                    transform-origin: left center; //왼쪽 중앙 쪽에서 줄어들고 싶어서
+                }
+            }
+        }
+    }
+  }
+  
